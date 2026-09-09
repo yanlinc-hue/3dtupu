@@ -4,9 +4,6 @@
 许可证；3d图谱的专有许可不取代这些第三方许可证。
 
 - React and React DOM — MIT
-- Murmur (sgaofen) — MIT；完整许可见 MURMUR_LICENSE
-- Vite — MIT（构建工具）
-- html-to-image — MIT
 - Next.js — MIT
 - PDF.js (`pdfjs-dist`) — Apache-2.0
 - Mammoth.js — BSD-2-Clause
