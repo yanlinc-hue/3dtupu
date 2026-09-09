@@ -91,6 +91,8 @@ npx --yes wrangler@4.92.0 deploy --config wrangler.jsonc
 
 若页面嵌入演示视频，须同时核对 `server/worker.ts` 的响应 CSP 与 `vite.config.ts` 注入的 CSP，允许同源媒体；只改其中一处仍可能无法播放。不要为视频放开任意脚本、任意连接地址或任意媒体域名。
 
+HTML 响应同时保留 `Cache-Control: no-store, no-transform`，禁止 CDN 改写页面或自动插入统计脚本；公网验收应检查实际 HTML，不只检查仓库源码。这个行为见 [Cloudflare Web Analytics FAQ](https://developers.cloudflare.com/web-analytics/faq/)。不要为消除浏览器告警而放宽 `script-src` 或 `connect-src`。
+
 ## 5. 发布后验收与回滚
 
 1. HTTPS 首页、四个中文入口、静态资源、文档、示例和中文字幕视频可用。
